@@ -1,105 +1,153 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-image: url('https://img.freepik.com/premium-vector/colorful-gradient-color-effect-background-website-banner-creative-graphic-design-element_120819-443.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("https://img.freepik.com/premium-vector/colorful-gradient-color-effect-background-website-banner-creative-graphic-design-element_120819-443.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
 }
 
 .navbar a:hover {
-    background-color: #575757;
+  background-color: #575757;
 }
 
 .navbar h1 {
-    color: white;
-    margin: 0;
-    font-size: 24px;
-    padding: 0 20px;
+  color: white;
+  margin: 0;
+  font-size: 24px;
+  padding: 0 20px;
 }
 
 .navbar .nav-links {
-    display: flex;
+  display: flex;
 }
 
 .content {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
 }
 
 .content h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .color-box {
-    display: inline-block;
-    width: 150px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0 , 0, 0, 0.1);
+  display: inline-block;
+  width: 150px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .color-box h3 {
-    font-size: 18px;
-    margin: 10px 0;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 .color-box p {
-    font-size: 14px;
-    margin: 10px 0;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
 .color-circle {
-    width:  50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 10px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px auto;
 }
 
-.red { background-color: red; }
-.orange { background-color: orange; }
-.yellow { background-color: yellow; }
-.green { background-color: green; }
-.blue { background-color: blue; }
-.purple { background-color: purple; }
-.pink { background-color: pink; }
-.brown { background-color: brown; }
-.black { background-color: black; }
-.white { background-color: white; border: 1px solid #ccc; }
+.red {
+  background-color: red;
+}
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.purple {
+  background-color: purple;
+}
+.pink {
+  background-color: pink;
+}
+.brown {
+  background-color: #daa06d;
+}
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+  border: 1px solid #ccc;
+}
 
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-    margin-top: auto;
-    width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+}
+
+.content1 {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content1 p {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.content1 h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 0 20px;
 }
