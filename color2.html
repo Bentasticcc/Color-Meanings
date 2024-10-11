@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Meanings - Color 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="midterm.css">
+    <style>
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #00d4ff;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <div class="nav">
+            <a href="color.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="title">Color Meanings</div>
+        <div class="subtitle">Cheatsheet</div>
+        <div class="grid">
+            <div class="card teal">
+                <h3>Teal</h3>
+                <p>calmness, serenity, peace, sophistication</p>
+            </div>
+            <div class="card maroon">
+                <h3>Maroon</h3>
+                <p>controlled power, thoughtful action, creativity</p>
+            </div>
+            <div class="card olive">
+                <h3>Olive</h3>
+                <p>peace, wisdom, harmony, fertility</p>
+            </div>
+            <div class="card turquoise">
+                <h3>Turquoise</h3>
+                <p>tranquility, creativity, communication, protection</p>
+            </div>
+            <div class="card coral">
+                <h3>Coral</h3>
+                <p>warmth, comfort, emotional healing</p>
+            </div>
+            <div class="card navy">
+                <h3>Navy</h3>
+                <p>authority, trust, intelligence, power</p>
+            </div>
+            <div class="card lavender">
+                <h3>Lavender</h3>
+                <p>grace, elegance, purity, calmness</p>
+            </div>
+            <div class="card salmon">
+                <h3>Salmon</h3>
+                <p>warmth, connection, comfort, joy</p>
+            </div>
+            <div class="card beige">
+                <h3>Beige</h3>
+                <p>calmness, neutrality, simplicity, elegance</p>
+            </div>
+            <div class="card chocolate">
+                <h3>Chocolate</h3>
+                <p>luxury, indulgence, comfort, sophistication</p>
+            </div>
+            <div class="card mint">
+                <h3>Mint</h3>
+                <p>freshness, tranquility, creativity, growth</p>
+            </div>
+            <div class="card indigo">
+                <h3>Indigo</h3>
+                <p>introspection, wisdom, spirituality, intuition</p>
+            </div>
+        </div>
+        <div class="dots">
+            <div class="dot" title="Click to change color and meaning"></div>
+            <div class="dot" title="Click to change color and meaning"></div>
+            <div class="dot" title="Click to change color and meaning"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 1;
+
+            dots[1].style.backgroundColor = 'white';
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    if (index === 0) {
+                        window.location.href = 'color.html';
+                    } else if (index === 1) {
+                        window.location.href = 'color2.html';
+                    } else if (index === 2) {
+                        window.location.href = 'color3.html';
+                    }
+                    dots.forEach(d => {
+                        d.style.backgroundColor = '#00d4ff';
+                    });
+                    dot.style.backgroundColor = 'white';
+                    currentIndex = index;
+                });
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

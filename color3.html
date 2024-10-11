@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Meanings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="midterm.css">
+    <style>
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #00d4ff;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <div class="nav">
+            <a href="color.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="title">Color Meanings</div>
+        <div class="subtitle">Cheatsheet</div>
+        
+        <div class="grid">
+            <div class="card amethyst">
+                <h3>Amethyst</h3>
+                <p>Represents spirituality, protection, and inner peace.</p>
+            </div>
+            <div class="card citrine">
+                <h3>Citrine</h3>
+                <p>Symbolizes joy, creativity, and self-expression.</p>
+            </div>
+            <div class="card rust">
+                <h3>Rust</h3>
+                <p>Conveys warmth, earthiness, and grounded strength.</p>
+            </div>
+            <div class="card magenta">
+                <h3>Magenta</h3>
+                <p>Evokes compassion, kindness, and universal love.</p>
+            </div>
+            <div class="card mustard">
+                <h3>Mustard</h3>
+                <p>Represents vitality, optimism, and enthusiasm.</p>
+            </div>
+            <div class="card emerald">
+                <h3>Emerald</h3>
+                <p>Symbolizes renewal, growth, and prosperity.</p>
+            </div>
+            <div class="card azure">
+                <h3>Azure</h3>
+                <p>Represents calmness, serenity, and expansiveness.</p>
+            </div>
+            <div class="card jade">
+                <h3>Jade</h3>
+                <p>Evokes harmony, balance, and wisdom.</p>
+            </div>
+            <div class="card ochre">
+                <h3>Ochre</h3>
+                <p>Represents stability, warmth, and heritage.</p>
+            </div>
+            <div class="card cobalt">
+                <h3>Cobalt</h3>
+                <p>Symbolizes intelligence, depth, and trustworthiness.</p>
+            </div>
+            <div class="card peachpuff">
+                <h3>Peach Puff</h3>
+                <p>Evokes softness, warmth, and approachability.</p>
+            </div>
+            <div class="card sapphire">
+                <h3>Sapphire</h3>
+                <p>Represents wisdom, loyalty, and nobility.</p>
+            </div>
+        </div>
+        
+        <div class="dots">
+            <div class="dot" onclick="location.href='color.html'"></div>
+            <div class="dot" onclick="location.href='color2.html'"></div>
+            <div class="dot active" onclick="location.href='color3.html'"></div>
+        </div>
+    </div>
+    <script>
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                dots.forEach(d => d.classList.remove('active'));
+                dot.classList.add('active');
+                if (index === 0) {
+                    location.href = 'color.html';
+                } else if (index === 1) {
+                    location.href = 'color2.html';
+                } else {
+                    location.href = 'color3.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

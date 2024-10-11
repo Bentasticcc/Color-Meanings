@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Color Meanings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="midterm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+
+        <div class="nav">
+            <a href="color.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <h1 class="title">Contact Us</h1>
+        <p class="subtitle">We'd love to hear from you!</p>
+
+        <div class="contact-info" style="margin: 2em 0;">
+            <h2>Get in Touch</h2>
+            <p>Email: <span style="color: inherit;">ninja.degamo141@gmail.com</span> <a href="mailto:ninja.degamo141@gmail.com" style="display: none;">(link)</a></p>
+            <p>Phone: <span style="color: inherit;">(+63) 908 952 8742</span> <a href="tel:+639089528742" style="display: none;">(link)</a></p>
+            <p>Follow Us:</p>
+            <p>
+                <a href="https://facebook.com" target="_blank" style="margin-right: 10px;">
+                    <i class="fab fa-facebook" style="font-size: 24px; color: inherit;"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" style="margin-right: 10px;">
+                    <i class="fab fa-twitter" style="font-size: 24px; color: inherit;"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fab fa-instagram" style="font-size: 24px; color: inherit;"></i>
+                </a>
+            </p>
+        </div>
+        
+
+        <form action="#" method="post" style="max-width: 600px; margin: auto;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name" style="width: 100%; padding: 0.5em; margin-bottom: 1em; border-radius: 5px; border: 1px solid #ccc;">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email" style="width: 100%; padding: 0.5em; margin-bottom: 1em; border-radius: 5px; border: 1px solid #ccc;">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your Message" style="width: 100%; padding: 0.5em; margin-bottom: 1em; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+
+            <a href="contact.html" style="padding: 0.7em 1.5em; border: none; border-radius: 5px; background-color: #00d4ff; color: white; text-decoration: none; display: inline-block; cursor: pointer; transition: background-color 0.3s;">
+                Send Message
+            </a>
+        </form>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

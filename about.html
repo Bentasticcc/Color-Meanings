@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Color Meanings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="midterm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+
+        <div class="nav">
+            <a href="color.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="title">About Color Meanings</div>
+        <div class="subtitle">Discover the Psychology of Colors</div>
+
+        <div class="content">
+            <p>
+                Color meanings involve the interpretation of how different hues influence emotions, perceptions, and behaviors. This field, known as <span class="highlight">color psychology</span>, is crucial in understanding how color can shape moods and decisions. 
+            </p>
+            <p>
+                The way colors are perceived can vary across cultures. For example, while red may symbolize passion and love in some societies, it might signify danger in others. <span class="highlight">Blue</span>, on the other hand, typically represents trust and calmness.
+            </p>
+            <p>
+                Understanding these meanings is particularly important in branding, marketing, and design. It allows for a more strategic use of color to convey specific messages or evoke desired emotional responses.
+            </p>
+            <p>
+                The aim of this site is to provide an easy-to-understand guide on <span class="highlight">color meanings</span>, so you can use color effectively in your creative projects.
+            </p>
+        </div>
+
+        <div class="dots">
+            <div class="dot" title="Colors and Emotions"></div>
+            <div class="dot" title="Colors in Branding"></div>
+            <div class="dot" title="Cultural Significance of Colors"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('.dot');
+            const colors = [
+                { color: 'red', meaning: 'Colors can evoke strong emotions. Red, for example, is often associated with love, anger, or danger.' },
+                { color: 'blue', meaning: 'Brands use colors to communicate trust. Blue is a popular choice for brands promoting security and reliability.' },
+                { color: 'green', meaning: 'Different cultures attribute various meanings to colors. Green can represent growth, nature, or even envy.' }
+            ];
+            
+            let currentIndex = 0;
+            let lastClickedIndex = -1;
+            dots[currentIndex].classList.add('active');
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    if (lastClickedIndex === index) {
+                        window.location.href = 'about.html';
+                    } else {
+                        dots[currentIndex].classList.remove('active');
+                        currentIndex = index;
+                        dots[currentIndex].classList.add('active');
+                        document.querySelector('.content').innerHTML = `<p>${colors[currentIndex].meaning}</p>`;
+                        lastClickedIndex = index;
+                    }
+                });
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
